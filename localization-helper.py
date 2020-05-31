@@ -64,6 +64,8 @@ def merge_text(new_text_filename, out_text_filename, prev_text_jsonname = None):
 
 if __name__ == "__main__":
 
+## save script as local file first
+
 ## pull out text 
 #     maps=['script1.txt', 'script2.txt', 'script3.txt']
 #     terms=[]
@@ -75,8 +77,10 @@ if __name__ == "__main__":
 #         for s in terms:
 #             out.write(s+'\n')
 
-## merge with previous work
+## merge and format with previous work
 #     merge_text('terms.txt', 'translate_me.txt', 'dict.json')
+
+## finish localization work in 'translate_me.txt'
 
 ## generate dictionary for reuse in future.
 #     tmp=dict_gen("translate_me.txt")
@@ -84,11 +88,11 @@ if __name__ == "__main__":
 #       fileout.write(json.dumps(tmp))
 
 ## write translated work back to script.
-#     maps=['adventure.txt', 'arreat.txt', 'conversion.txt', 'elite.txt', 'regular.txt', 'renew.txt', 'secret.txt', 'training.txt']
 #     d=load_dict("dict.json")
 #     for i in maps:
 #       o=translate(i,d)
 #       with open("./out/"+i, 'w', encoding='utf8') as out:
 #         out.write(o)
 
+## paste the finished script into workshop.
     pass
