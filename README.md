@@ -1,5 +1,6 @@
 # owscript-localization-helper
 To use this helper for localization work:  
+
   0. *User manually* save overwatch script to local file  
   1. pull out Custom Strings from overwatch script and write them out into one file.  
   2. *User manually* select which strings they need or not to translate.    
@@ -13,6 +14,7 @@ To use this helper for localization work:
   6. *User manually* upload it to workshop.  
   
 使用这个脚本进行本地化时： 
+
   0. *用户手动* 把地图工坊文件保存到本地  
   1. 取出自定义文本并且写进一个文件  
   2. *用户手动* 选择哪些文本会被翻译    
