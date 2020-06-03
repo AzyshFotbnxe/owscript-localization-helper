@@ -33,11 +33,11 @@ def translate(filename, trans_dict):
         while(start>=0):
             start=content.find("Custom String", start)
             if start<0 : break
-            start=content.find("\"", start)
+            start=content.find("\"", start+len('Custom String'))
             end=content.find("\"", start+1)
             t=content[start+1:end].strip()
             if t in trans_dict:
-                content=content.replace(t, trans_dict[t], 1)
+                content=content.replace("\"{}\"".format(t), "\"{}\"".format(trans_dict[t]), 1)
             start=content.find('\"', start+1)
             start+=1
         return content
