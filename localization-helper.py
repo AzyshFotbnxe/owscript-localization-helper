@@ -36,6 +36,7 @@ def translate(filename, trans_dict):
             start=content.find("\"", start+len('Custom String'))
             end=content.find("\"", start+1)
             t=content[start+1:end].strip()
+            print(t)
             if t in trans_dict:
                 content=content.replace("\"{}\"".format(t), "\"{}\"".format(trans_dict[t]), 1)
             start=content.find('\"', start+1)
@@ -46,21 +47,6 @@ def load_dict(dictname):
     with open(dictname, 'r', encoding='utf8') as dictin:
         out=json.loads(dictin.read())
         return out
-
-def merge_text(new_text_filename, out_text_filename, prev_text_jsonname = None):
-    out=dict()
-    with open(new_text_filename, 'r', encoding='utf8') as newin:
-        for l in newin:
-            out[l.strip()]=''
-        if prev_text_jsonname:
-            d=load_dict(prev_text_jsonname)
-            out.update(d)
-        with open(out_text_filename, 'w', encoding='utf8') as newout:
-            for i in out.items():
-                newout.write(i[0]+'\n')
-                newout.write(i[1]+'\n')
-                newout.write('\n')
-    return out
 
 if __name__ == "__main__":
 
